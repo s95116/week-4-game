@@ -2,16 +2,52 @@ body{
 	background-image: url(../images/background-image.jpg);
 	background-size: 100%;
 	background-repeat: no-repeat;
+	font-family: 'Slabo 27px', serif;
 }
 
 .navbar{
-	border: 2px solid none;
-	background-color: blue;
-	text-align: center;
-	height: 55px;
+	height: 60px;
 	padding-top: 25px;
 	opacity: 0.7;
-	color: white;
+	color: black;
+}
 
+.panel-body h1{
+	padding-top: 0;
+	margin-top: 0px;
+}
 
+#panel-instructions{
+	/*width:400px;*/
+	height:280px;
+	font-size: 12px;	
+}
+
+#gem-box{
+	height:auto;
+	width:400px;
+	background:none;
+	border:0;
+}
+
+#gems1, #gems2, #gems3, #gems4{
+	height:80px;
+	width:80px;
+	border: 2px solid gray;
+}
+
+#score-card{
+	color:white;
+}
+
+#computer {
+	background-color: blue;
+}
+
+#user{
+	background-color: green;
+}
+
+#score{
+	background-color: red;
 }
