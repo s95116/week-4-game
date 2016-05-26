@@ -1,0 +1,17 @@
+body{
+	background-image: url(../images/background-image.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.navbar{
+	border: 2px solid none;
+	background-color: blue;
+	text-align: center;
+	height: 55px;
+	padding-top: 25px;
+	opacity: 0.7;
+	color: white;
+
+
+}
