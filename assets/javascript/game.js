@@ -6,7 +6,7 @@ $( document ).ready(function() {
     var numbers = [10, 5, 3, 7];
     var wins = 0;
     var losses = 0;
-var crystals = $('.gems');
+
     //Randomly generates a number that the user must match
     numberToGuess = Math.floor(Math.random() * 120) + 19;
     
@@ -24,7 +24,7 @@ var crystals = $('.gems');
       console.log(numbers)
 
     for (var i=0; i <numbers.length; i++){
-      
+      var crystals = $('.gems');
       
    		crystals.attr('value', numbers[i]);
 
@@ -32,11 +32,14 @@ var crystals = $('.gems');
       console.log(crystals[i]);
    		// $('#gems1').html('#user-number');
       // $('#gems1').append(total);
+      $('#crystals').append(crystals);
     }
+
     console.log(numbers)
+    
     $('.gems').on('click', function(){
       // console.log("this is working")
-
+       console.log(numbers)
 
       total = total + parseInt($(this).attr('value'));
       console.log(total);
