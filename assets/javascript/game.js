@@ -35,14 +35,15 @@ $( document ).ready(function() {
       $('#crystals').append(crystals);
     }
 
-    console.log(numbers)
-    
+    console.log(numbers);
+
     $('.gems').on('click', function(){
       // console.log("this is working")
        console.log(numbers)
 
       total = total + parseInt($(this).attr('value'));
       console.log(total);
+      
       $('#user-number').text(total);
 
 
@@ -68,12 +69,16 @@ $( document ).ready(function() {
         updateLosses();
       }
 
-      // function updateScreen(){
-      // $('#computer-number').html(numberToGuess);
-      // $('#')// var total = 0;
-      // var numbers;
-      // var wins = 0;
-      // var losses = 0;
+    //   function updateScreen(){
+
+    //     $('#computer-number').replaceWith( $(numberToGuess) );
+    //     $('#userGuess').html(total);
+    //     $(numbers);
+
+    //     $( "div.third" ).replaceWith( $( ".first" ) );
+
+    // }
+
     });
 });
 
