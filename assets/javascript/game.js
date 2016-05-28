@@ -1,27 +1,76 @@
 $( document ).ready(function() {
-    var numberToGuess = 53;
-    var counter = 0;
+    
+    //declare variables
+    var numberToGuess;
+    var total = 0;
     var numbers = [10, 5, 3, 7];
+    var wins = 0;
+    var losses = 0;
+var crystals = $('.gems');
+    //Randomly generates a number that the user must match
+    numberToGuess = Math.floor(Math.random() * 120) + 19;
+    
+    //Randomly generates a number that is attached to each crystal image
+    // numbers = Math.floor(Math.random() * 12) + 1;
 
+    //Takes the number generated and plugs it into #computer-number div in the html
     $('#computer-number').text(numberToGuess);
-    
-    for (var i=0; i< numbers.length; i++){
-      var imageCrystal = $(gems1);
-   
+
+      console.log(numbers)
+      numbers[0]= Math.floor(Math.random() * 12) + 1;
+      numbers[1]= Math.floor(Math.random() * 12) + 1;
+      numbers[2]= Math.floor(Math.random() * 12) + 1;
+      numbers[3]= Math.floor(Math.random() * 12) + 1;
+      console.log(numbers)
+
+    for (var i=0; i <numbers.length; i++){
       
-      imageCrystal.attr('data-num', numbers[i]);
       
+   		crystals.attr('value', numbers[i]);
+
+      
+      console.log(crystals[i]);
+   		// $('#gems1').html('#user-number');
+      // $('#gems1').append(total);
     }
-    
-    $('#gems1').on('click', function(){
-      counter = counter + parseInt($(this).data('num'));
-      
-      $('#user-number').text(counter);
-      if (counter == numberToGuess){
-        alert('You won!!!!');
-      }else if( counter > numberToGuess){
-        alert('You lost!');
+    console.log(numbers)
+    $('.gems').on('click', function(){
+      // console.log("this is working")
+
+
+      total = total + parseInt($(this).attr('value'));
+      console.log(total);
+      $('#user-number').text(total);
+
+
+    //function to update wins counter
+    function updateWins(){
+      wins++
+      $('#wins').text(wins)
+      // alert("You Won!");
+      // updateScreen();
+    }
+
+    //function to update losses counter
+    function updateLosses(){
+      losses++
+      $('#losses').text(losses);
+      // alert("You Lost!");
+      // updateScreen();
+    }
+
+      if (total == numberToGuess){
+        updateWins();
+      }else if( total > numberToGuess){
+        updateLosses();
       }
+
+      // function updateScreen(){
+      // $('#computer-number').html(numberToGuess);
+      // $('#')// var total = 0;
+      // var numbers;
+      // var wins = 0;
+      // var losses = 0;
     });
 });
 
